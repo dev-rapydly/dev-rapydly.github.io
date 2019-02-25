@@ -74,7 +74,8 @@ gulp.task('vendor', function(cb) {
 function css() {
   var plugins = [
       uncss({
-          html: ['index.html']
+          html: ['index.html'],
+          ignore: [/^(\.)*mpf-(\w*)$/g]
       }),
   ];
 
@@ -97,7 +98,7 @@ function css() {
     .pipe(header(banner, {
       pkg: pkg
     }))
-    .pipe(postcss(plugins))
+    // .pipe(postcss(plugins))
     .pipe(gulp.dest("./css"))
     .pipe(rename({
       suffix: ".min"
