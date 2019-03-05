@@ -91,10 +91,14 @@
 
   var recalculate = function() {
     var tables = parseInt($('#input-tables').val());
+    if(tables < 0) tables = 0;
+    
     var devs = parseInt($('#input-devs').val());
+    if(devs < 0) devs = 0;
+    
     var api = $('#checkbox-api').prop('checked');
     var app = $('#checkbox-app').prop('checked');
-
+console.log(devs);
     if((!api && !app) || tables <= 0 || devs <= 0) {
       $('#total').text(0);
     }
@@ -103,16 +107,20 @@
     total += app ? tables * 4 : 0;
     total = total * 1.3;
     total = total / devs;
-    $('#total').text(Math.round(total));
-    var totalInfo = 'Based on 2 days for the api, and 4 days for the web app, and an additional 30% for testing.';
+    var realTotal = Math.round(total);
+    realTotal = realTotal < 0 ? 0 : realTotal > 1000 ? 'All of the' : realTotal;
+    $('#total').text(realTotal);
+    var totalInfo = 'Based on 2 days per table for the api, and 4 days per table for the web app, and an additional 30% for testing.';
     $('#total-info').prop('title', totalInfo);
   };
 
   recalculate();
-  $('#input-tables').keyup(function(){debugger;recalculate()});
-  $('#input-tables').click(function(){debugger;recalculate()});
-  $('#checkbox-api').click(function(){debugger;recalculate()});
-  $('#checkbox-app').click(function(){debugger;recalculate()});
+  $('#input-tables').keyup(function(){recalculate()});
+  $('#input-tables').click(function(){recalculate()});
+  $('#input-devs').keyup(function(){recalculate()});
+  $('#input-devs').click(function(){recalculate()});
+  $('#checkbox-api').click(function(){recalculate()});
+  $('#checkbox-app').click(function(){recalculate()});
   $("#total-info").tooltip({ placement: 'right'});
 
   $('#me').prop('h' + 'r' + 'e' + 'f', 'm' + 'a' + 'ilto' + ':' + 'info' + '@' + 'rapydly' + '.' + 'com');
