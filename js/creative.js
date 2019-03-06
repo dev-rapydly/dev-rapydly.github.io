@@ -91,16 +91,17 @@
 
   var recalculate = function() {
     var tables = parseInt($('#input-tables').val());
-    if(tables < 0) tables = 0;
+    if(!tables || tables < 0) tables = 0;
     
     var devs = parseInt($('#input-devs').val());
-    if(devs < 0) devs = 0;
+    if(!devs || devs < 0) devs = 0;
     
     var api = $('#checkbox-api').prop('checked');
     var app = $('#checkbox-app').prop('checked');
-console.log(devs);
+
     if((!api && !app) || tables <= 0 || devs <= 0) {
       $('#total').text(0);
+      return;
     }
     var total = 0;
     total += api ? tables * 2 : 0;
