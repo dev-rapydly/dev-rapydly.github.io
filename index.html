@@ -2,7 +2,15 @@
 <html lang="en">
 
   <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-135878124-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
 
+      gtag('config', 'UA-135878124-1');
+    </script>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
@@ -20,7 +28,7 @@
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
       <div class="container">
-        <a class="navbar-brand js-scroll-trigger" href="#page-top" style="font-family:'Advent Pro';font-size: 2rem">Rapydly</a>
+        <a class="navbar-brand js-scroll-trigger" href="#page-top" style="font-family:'Advent Pro';font-size: 2rem"><img class="logo" src="/img/logo-n-t.png" /></a>
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -263,9 +271,18 @@
         </div>
       </div>
     </section>
-    <div id="caveats" style="margin-left:10px;font-size: 0.7em;" class="mb-4">
+    <div id="caveats" class="bg-dark text-white" style="padding:20px;font-size: 0.7em;" class="mb-4">
       * SQL Server databases only. MS Access, Oracle, etc can be built but are subject to a longer development period for no additional cost.<br>
       ** Next day MVP is an estimate only, and could be shortened or extended depending on (but not limited to) database size, table and ID naming conventions, overall database structure and client's responsiveness to questions. Next day MVP is generally defined as when we are comfortable showing our solution to clients. Various rounds of feedback/ code changes can occur, and can also affect this estimate.<br>
+    </div>
+    <div id="cookieBar">
+      <div class="cookieBarInner">
+        <span class="cookieBarText">Google serves cookies to analyse traffic to this site. Information about your use of our site is shared with Google for that purpose.</span>
+        <span class="cookieBarButtons">
+          <a href="https://www.google.com/policies/technologies/cookies/" rel="noopener" target="_blank" class="cookieBarButton cookieBarMoreButton">See details</a>
+          <a class="cookieBarButton cookieBarConsentButton" onclick="document.getElementById('cookieBar').style.display = 'none'" >Got it 👍</a>
+        </span>
+      </div>
     </div>
 
     <!-- Bootstrap core JavaScript -->

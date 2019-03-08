@@ -76,3 +76,19 @@ img::-moz-selection {
   color: $white;
   background: transparent;
 }
+
+a.navbar-brand.js-scroll-trigger {
+  max-width: 74%;
+  img{
+    max-width: 100%;
+    width: 300px;
+    @media (min-width: 992px){
+      filter: invert(1);
+    }
+  }
+}
+nav.navbar-shrink{
+  img{
+    filter: invert(0)!important;
+  }
+}
