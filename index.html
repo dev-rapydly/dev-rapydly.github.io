@@ -28,7 +28,9 @@
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
       <div class="container">
-        <a class="navbar-brand js-scroll-trigger" href="#page-top" style="font-family:'Advent Pro';font-size: 2rem"><img class="logo" src="/img/logo-n-t.png" /></a>
+        <a class="navbar-brand js-scroll-trigger" href="#page-top" style="font-family:'Advent Pro';font-size: 2rem">
+          <img class="logo" src="/img/logo-n-t.png" />
+        </a>
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -54,7 +56,7 @@
       </div>
     </nav>
 
-    <header class="masthead text-center text-white d-flex">
+    <header id="rapydly-header" class="masthead text-center text-white d-flex">
       <div class="container my-auto">
         <div class="row">
           <div class="col-lg-10 mx-auto">
@@ -134,7 +136,11 @@
         <div class="row no-gutters popup-gallery">
           <div class="col-lg-4 col-sm-6">
             <a class="portfolio-box" href="img/portfolio/fullsize/solution.png">
-              <img class="img-fluid" src="img/portfolio/thumbnails/solution.webp" alt="">
+              <picture>
+                  <source class="img-fluid" type="image/webp" srcset="img/portfolio/thumbnails/solution.webp">
+                  <source class="img-fluid" type="image/png" srcset="img/portfolio/thumbnails/solution.png">
+                  <img class="img-fluid" src="img/portfolio/thumbnails/solution.png" alt="Onion Architecture">
+              </picture>
               <div class="portfolio-box-caption">
                 <div class="portfolio-box-caption-content">
                   <div class="project-category text-faded">
@@ -149,7 +155,11 @@
           </div>
           <div class="col-lg-4 col-sm-6">
             <a class="portfolio-box" href="img/portfolio/fullsize/controller.png">
-              <img class="img-fluid" src="img/portfolio/thumbnails/controller.webp" alt="">
+              <picture>
+                  <source class="img-fluid" type="image/webp" srcset="img/portfolio/thumbnails/controller.webp">
+                  <source class="img-fluid" type="image/png" srcset="img/portfolio/thumbnails/controller.png">
+                  <img class="img-fluid" src="img/portfolio/thumbnails/controller.png" alt="API Controller">
+              </picture>
               <div class="portfolio-box-caption">
                 <div class="portfolio-box-caption-content">
                   <div class="project-category text-faded">
@@ -164,7 +174,11 @@
           </div>
           <div class="col-lg-4 col-sm-6">
             <a class="portfolio-box" href="img/portfolio/fullsize/swagger.png">
-              <img class="img-fluid" src="img/portfolio/thumbnails/swagger.webp" alt="">
+              <picture>
+                  <source class="img-fluid" type="image/webp" srcset="img/portfolio/thumbnails/swagger.webp">
+                  <source class="img-fluid" type="image/png" srcset="img/portfolio/thumbnails/swagger.png">
+                  <img class="img-fluid" src="img/portfolio/thumbnails/swagger.png" alt="Swagger">
+              </picture>
               <div class="portfolio-box-caption">
                 <div class="portfolio-box-caption-content">
                   <div class="project-category text-faded">
@@ -179,7 +193,11 @@
           </div>
           <div class="col-lg-4 col-sm-6">
             <a class="portfolio-box" href="img/portfolio/fullsize/crud_list.png">
-              <img class="img-fluid" src="img/portfolio/thumbnails/crud_list.webp" alt="">
+              <picture>
+                  <source class="img-fluid" type="image/webp" srcset="img/portfolio/thumbnails/crud_list.webp">
+                  <source class="img-fluid" type="image/png" srcset="img/portfolio/thumbnails/crud_list.png">
+                  <img class="img-fluid" src="img/portfolio/thumbnails/crud_list.png" alt="List all">
+              </picture>
               <div class="portfolio-box-caption">
                 <div class="portfolio-box-caption-content">
                   <div class="project-category text-faded">
@@ -194,7 +212,11 @@
           </div>
           <div class="col-lg-4 col-sm-6">
             <a class="portfolio-box" href="img/portfolio/fullsize/crud_edit.png">
-              <img class="img-fluid" src="img/portfolio/thumbnails/crud_edit.webp" alt="">
+              <picture>
+                  <source class="img-fluid" type="image/webp" srcset="img/portfolio/thumbnails/crud_edit.webp">
+                  <source class="img-fluid" type="image/png" srcset="img/portfolio/thumbnails/crud_edit.png">
+                  <img class="img-fluid" src="img/portfolio/thumbnails/crud_edit.png" alt="Edit entities">
+              </picture>
               <div class="portfolio-box-caption">
                 <div class="portfolio-box-caption-content">
                   <div class="project-category text-faded">
@@ -209,7 +231,11 @@
           </div>
           <div class="col-lg-4 col-sm-6">
             <a class="portfolio-box" href="img/portfolio/fullsize/crud_error.png">
-              <img class="img-fluid" src="img/portfolio/thumbnails/crud_error.webp" alt="">
+              <picture>
+                  <source class="img-fluid" type="image/webp" srcset="img/portfolio/thumbnails/crud_error.webp">
+                  <source class="img-fluid" type="image/png" srcset="img/portfolio/thumbnails/crud_error.png">
+                  <img class="img-fluid" src="img/portfolio/thumbnails/crud_error.png" alt="Error handling">
+              </picture>
               <div class="portfolio-box-caption">
                 <div class="portfolio-box-caption-content">
                   <div class="project-category text-faded">

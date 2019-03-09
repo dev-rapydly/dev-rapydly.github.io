@@ -2,13 +2,6 @@
 header.masthead {
   padding-top: 10rem;
   padding-bottom: calc(10rem - 56px);
-  background-image: url('../img/header.webp');
-  @media screen and (max-width: 400px) {
-    background-image: url('../img/header-s.webp');
-  }
-  @media screen and (min-width: 1200px) {
-    background-image: url('../img/header-l.webp');
-  }
   background-position: center center;
   @include background-cover;
   hr {
@@ -39,5 +32,25 @@ header.masthead {
     h1 {
       font-size: 4rem;
     }
+  }
+}
+
+header.masthead.isApple {
+  background-image: url('../img/header.jpg');
+  @media screen and (max-width: 400px) {
+    background-image: url('../img/header-s.jpg');
+  }
+  @media screen and (min-width: 1200px) {
+    background-image: url('../img/header-l.jpg');
+  }
+}
+
+header.masthead{
+  background-image: url('../img/header.webp');
+  @media screen and (max-width: 400px) {
+    background-image: url('../img/header-s.webp');
+  }
+  @media screen and (min-width: 1200px) {
+    background-image: url('../img/header-l.webp');
   }
 }

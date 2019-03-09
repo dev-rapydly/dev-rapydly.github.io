@@ -1,6 +1,10 @@
 (function($) {
   "use strict"; // Start of use strict
 
+  if(/^(iPhone|iPad|iPod)/.test(navigator.platform) || /(MSIE|Trident\/)/.test(navigator.userAgent)){
+    document.getElementById('rapydly-header').classList.add('isApple');
+  }
+
   // Smooth scrolling using jQuery easing
   $('a.js-scroll-trigger[href*="#"]:not([href="#"])').click(function() {
     if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
