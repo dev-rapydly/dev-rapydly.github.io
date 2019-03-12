@@ -17103,12 +17103,14 @@ section#calculator div.row div.col-lg-3 label.form-text input.form-check-input {
 }
 
 div#cookieBar {
+  bottom: -120px;
+  -webkit-transition: bottom 0.5s ease 0s;
+  transition: bottom 0.5s ease 0s;
   background-color: #5a5a5a;
   border: none;
   border-radius: 0;
   -moz-border-radius: 0;
   -webkit-border-radius: 0;
-  bottom: 0;
   color: #fff;
   left: 0;
   margin: 0;
@@ -17120,6 +17122,18 @@ div#cookieBar {
 
 div#cookieBar div.cookieBarInner {
   padding: 10px 15px;
+  text-align: center;
+}
+
+div#cookieBar div.cookieBarInner span.cookieBarText {
+  text-align: left;
+  margin-bottom: 5px;
+}
+
+@media screen and (max-width: 400px) {
+  div#cookieBar div.cookieBarInner span.cookieBarText {
+    display: block;
+  }
 }
 
 div#cookieBar div.cookieBarInner span.cookieBarText,
@@ -17128,7 +17142,7 @@ div#cookieBar div.cookieBarInner span.cookieBarButtons {
   font-size: 13px;
   font-weight: 600;
   line-height: 1.8;
-  margin-right: 10px;
+  cursor: pointer;
 }
 
 div#cookieBar div.cookieBarInner span.cookieBarText :first-child,
@@ -17149,4 +17163,8 @@ div#cookieBar div.cookieBarInner span.cookieBarButtons a.cookieBarButton {
   padding: 4px 8px;
   text-decoration: none;
   white-space: nowrap;
+}
+
+div#cookieBar.show {
+  bottom: 0;
 }

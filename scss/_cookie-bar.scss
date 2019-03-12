@@ -1,10 +1,11 @@
-div#cookieBar{
+div#cookieBar {
+    bottom: -120px;
+    transition: bottom 0.5s ease 0s;
     background-color: #5a5a5a;
     border: none;
     border-radius: 0;
     -moz-border-radius: 0;
     -webkit-border-radius: 0;
-    bottom: 0;
     color: #fff;
     left: 0;
     margin: 0;
@@ -14,13 +15,21 @@ div#cookieBar{
     z-index: 999;
     div.cookieBarInner{
         padding: 10px 15px;
+        text-align: center;
+        span.cookieBarText{
+            @media screen and (max-width: 400px) {
+                display: block;
+            }
+            text-align: left;
+            margin-bottom: 5px;
+        }
         span.cookieBarText,
         span.cookieBarButtons{
             font-family: arial,sans-serif;
             font-size: 13px;
             font-weight: 600;
             line-height: 1.8;
-            margin-right: 10px;
+            cursor: pointer;
             :first-child{
                 margin-right: 5px;
             }
@@ -39,4 +48,8 @@ div#cookieBar{
             }
         }
     }
+}
+
+div#cookieBar.show{
+    bottom: 0;
 }
