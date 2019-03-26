@@ -17168,3 +17168,19 @@ div#cookieBar div.cookieBarInner span.cookieBarButtons a.cookieBarButton {
 div#cookieBar.show {
   bottom: 0;
 }
+
+#youtube-container {
+  width: 100%;
+  padding-top: 56.25%;
+  position: relative;
+}
+
+#youtube-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+}
