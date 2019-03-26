@@ -129,8 +129,13 @@
   $('#checkbox-api').click(function(){recalculate()});
   $('#checkbox-app').click(function(){recalculate()});
   $("#total-info").tooltip({ placement: 'right'});
+  
+  document.addEventListener('click', function (event) {
+    if (event.target.matches('.add-onclick-email')) window.location.href = 'mailto:info@rapydly.com';
+    if (event.target.matches('.add-onclick-im')) window.location.href = 'https://m.me/rapydly';
+    if (event.target.matches('.add-onclick-fb')) window.location.href = 'https://www.facebook.com/Rapydly';
+    if (event.target.matches('.add-onclick-li')) window.location.href = 'https://www.linkedin.com/company/Rapydly';
+    if (event.target.matches('.add-onclick-yt')) window.location.href = 'https://www.youtube.com/channel/UC2_wa5aY9HJ7ibz9oMwAIAQ';
+  }, false);
 
-  $('#me').prop('h' + 'r' + 'e' + 'f', 'm' + 'a' + 'ilto' + ':' + 'info' + '@' + 'rapydly' + '.' + 'com');
-  $('#me').text('info' + '@' + 'rapydly' + '.' + 'com');
-
-})(jQuery); // End of use strict
+})(jQuery);
