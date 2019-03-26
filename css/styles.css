@@ -17186,5 +17186,6 @@ div#cookieBar.show {
 }
 
 #contact div.row div.hasContent {
+  margin-top: 20px;
   cursor: pointer;
 }
